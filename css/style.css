@@ -1,0 +1,231 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    /* Растягиваем body по высоте html */
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+b {
+    font-weight: bold;
+}
+
+/* Header *Start* */
+
+.header {
+    padding: 21px 0 29px 0;
+
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
+}
+
+.header>.container {
+    margin: 0 229px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-wrapper_left, .header-wrapper_right {
+    display: flex;
+    align-items: center;
+}
+.logo-link {
+    margin-right: 117px;
+    display: block;
+}
+
+.logo {}
+
+.header-nav {}
+
+.header-nav__item {
+    color: #000;
+    font-family: Raleway;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90px;
+    text-decoration: none;
+}
+.header-nav__item:not(:last-child) {
+    margin-right:  37px;
+}
+
+.lang-selector {
+    display: flex;
+    align-items: center;
+}
+
+.lang-selector__item {
+    width: 40px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #000;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 90px; /* 600% */
+
+    border-radius: 6px;
+    background-color: #fff;
+
+    cursor: pointer;
+}
+.lang-selector__item.selected {
+    background-color: #E1E1E1;
+}
+
+.lang-selector .separator {
+    margin: 0 8px;
+
+    width: 1px;
+    height: 37px;
+
+    background-color: #6FBCC1;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-links__item {
+    width: 43px;
+    height: 43px;
+
+    cursor: pointer;
+}
+.social-links__item > img {
+    width: 100%;
+    height: 100%;
+}
+.button-style-1 {
+    padding: 18px 32px 18px 44px;
+    display: block;
+
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(44, 163, 153, 0.70) 0%, rgba(52, 157, 175, 0.70) 100%, rgba(73, 182, 201, 0.70) 100%);
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.25) inset;
+    backdrop-filter: blur(7.5px);
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.header-wrapper_right .button-style-1 {
+    margin-left: 54px;
+}
+.header-wrapper_right .social-links {
+    margin-left: 44px;
+}
+/* Header *Stop* */
+
+/* Footer *Start* */
+
+.footer {
+    padding: 44px 0;
+
+    background: #FFF;
+    box-shadow: 0px -5px 13px 0px rgba(0, 0, 0, 0.25);
+}
+.footer > .container {
+    margin: 0 240px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-nav {
+    display: flex;
+    align-items: center;
+}
+.footer-nav__item {
+    color: #000;
+    font-family: Raleway;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90px; /* 281.25% */
+    text-decoration: none;
+}
+.footer-nav__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+/* Footer *Stop* */
+
+/* Main section *Start* */
+
+.main-section {
+    position: relative;
+    padding: 99px 0 227px 0;
+    
+    overflow: hidden;
+}
+.main-section > .container {
+    margin: 0 228px;
+}
+.main-section__gradient {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(180deg, #27B5A9 2.28%, #28AECC 102.86%);
+
+    z-index: -2;
+}
+.main-section__bg {
+    position: absolute;
+    bottom: -167px;
+    right: 0;
+
+    z-index: -1;
+}
+.text-h1 {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90px; /* 128.571% */
+}
+.main-section .text-h1 {
+    margin-bottom: 71px;
+}
+.button-style-2 {
+    padding: 26px 64px;
+    width: fit-content;
+    display: block;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+
+    border-radius: 15px;
+    background: #21323A;
+}
+
+/* Main section *Stop* */

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 100 900; /* Диапазон веса шрифта (от 100 до 900) */
+    font-stretch: 100% 200%; /* Различные настройки наклона */
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* Диапазон веса шрифта (от 100 до 900) */
+    font-stretch: 100% 200%; /* Различные настройки наклона */
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* Диапазон веса шрифта (от 100 до 900) */
+    font-stretch: 100% 200%; /* Различные настройки наклона */
+    font-style: italic;
+}
