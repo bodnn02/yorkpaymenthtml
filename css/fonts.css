@@ -17,3 +17,9 @@
     font-stretch: 100% 200%; /* Различные настройки наклона */
     font-style: italic;
 }
+@font-face {
+    font-family: 'Questrial';
+    src: url('../fonts/Questrial-Regular.ttf') format('truetype');
+    font-weight: 100 900; /* Диапазон веса шрифта (от 100 до 900) */
+    font-stretch: 100% 200%; /* Различные настройки наклона */
+}

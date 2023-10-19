@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper_left">
+                <a class="logo-link" href="">
+                    <img class="logo" src="img/logo.svg" alt="">
+                </a>
+                <nav class="header-nav">
+                    <a class="header-nav__item" href="">Тарифы</a>
+                    <a class="header-nav__item" href="">Блог</a>
+                </nav>
+            </div>
+            <div class="header-wrapper_right">
+                <div class="lang-selector">
+                    <div class="lang-selector__item selected">RU</div>
+                    <div class="separator"></div>
+                    <div class="lang-selector__item">EN</div>
+                </div>
+                <nav class="social-links">
+                    <a class="social-links__item" href="">
+                        <img src="img/telegram.png" alt="">
+                    </a>
+                </nav>
+                <a class="button-style-1" href="">Личный кабинет</a>
+                <div class="m-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="m-overlay">
+            <div class="container">
+                <div class="m-menu">
+                    <div class="container">
+                        <div class="m-menu__header">
+                            <a class="logo-link" href="">
+                                <img class="logo" src="img/logo.svg" alt="">
+                            </a>
+                            <div class="m-menu__close-btn"></div>
+                        </div>
+                        <nav class="m-nav">
+                            <a class="m-nav__item" href="">Тарифы</a>
+                            <a class="m-nav__item" href="">Блог</a>
+                        </nav>
+                        <div class="lang-selector">
+                            <div class="lang-selector__item selected">RU</div>
+                            <div class="separator"></div>
+                            <div class="lang-selector__item">EN</div>
+                        </div>
+                        <a class="button-style-1" href="">Личный кабинет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="tariffs-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label"></div>
+                    <h2 class="section-h2">Тарифы</h2>
+                </div>
+                <div class="tariffs">
+                    <ul class="tariffs-list">
+                        <li class="tariffs-list__item">
+                            <div class="tariff-label">
+                                <img class="tariff-label__icon" src="img/razor.svg" alt="">
+                                <p class="tariff-label__text">Для любых покупок</p>
+                            </div>
+                            <h3 class="tariffs-list__h3">Универсальная</h3>
+                            <p class="tariffs-list__p">Карта подходит для оплаты любых онлайн сервисов</p>
+                            <div class="tarif-costs">
+                                <div class="tarif-costs__item">
+                                    <h3 class="tariffs-list__h3">5 USD</h3>
+                                    <h4 class="tariffs-list__h4">Стоимость выпуска карты</h4>
+                                </div>
+                                <div class="tarif-costs__item">
+                                    <h3 class="tariffs-list__h3">5%</h3>
+                                    <h4 class="tariffs-list__h4">Комиссия за пополнение</h4>
+                                </div>
+                                <div class="tarif-costs__item">
+                                    <h3 class="tariffs-list__h3">15 USD</h3>
+                                    <h4 class="tariffs-list__h4">Продление со второго месяца</h4>
+                                </div>
+                            </div>
+                            <img class="tarif-preview" src="img/tarif-universal.png" alt="">
+                            <a class="button-style-3" href="">Заказать</a>
+                        </li>
+                        <li class="tariffs-list__item">
+                            <div class="tariff-label">
+                                <img class="tariff-label__icon" src="img/impact.svg" alt="">
+                                <p class="tariff-label__text">Для рекламы</p>
+                            </div>
+                            <h3 class="tariffs-list__h3">Рекламная</h3>
+                            <p class="tariffs-list__p">Карта подходит для оплаты рекламных кабинетов: Google, Facebook, Tik Tok.</p>
+                            <div class="tarif-costs">
+                                <div class="tarif-costs__item">
+                                    <h3 class="tariffs-list__h3">5 USD</h3>
+                                    <h4 class="tariffs-list__h4">Стоимость выпуска карты</h4>
+                                </div>
+                                <div class="tarif-costs__item">
+                                    <h3 class="tariffs-list__h3">5%</h3>
+                                    <h4 class="tariffs-list__h4">Комиссия за пополнение</h4>
+                                </div>
+                                <div class="tarif-costs__item">
+                                    <h3 class="tariffs-list__h3">10 USD</h3>
+                                    <h4 class="tariffs-list__h4">Продление со второго месяца</h4>
+                                </div>
+                            </div>
+                            <img class="tarif-preview" src="img/tarif-adv.png" alt="">
+                            <a class="button-style-3" href="">Заказать</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a class="footer-nav__item" href="">Тарифы</a>
+                <a class="footer-nav__item" href="">Блог</a>
+            </nav>
+            <nav class="social-links">
+                <a class="social-links__item" href="">
+                    <img src="img/telegram.png" alt="">
+                </a>
+            </nav>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
