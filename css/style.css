@@ -229,3 +229,83 @@ b {
 }
 
 /* Main section *Stop* */
+
+/* Popular services *Start* */
+
+.popular-services {
+    padding: 83px 0;
+}
+.popular-services > .container {
+    margin: 0 307px;
+}
+.popular-services-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.popular-services__p {
+    color: #181818;
+    font-family: Raleway;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+}
+.section-header {
+}
+.section-label::before {
+    display: block;
+    margin-right: 6px;
+    width: 32px;
+    height: 6px;
+
+    content: '';
+    background-color: #23C9C3;
+}
+.section-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    color: #000;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 250% */
+}
+.section-h2 {
+    color: #373737;
+    font-family: Raleway;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px; /* 100% */
+}
+.section-label + .section-h2 {
+    margin-top: 10px;
+}
+.carousel {
+}
+.carousel-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.carousel__prev, .carousel__next  {
+    
+}
+.carousel__content {
+}
+.brands-list {
+}
+.brands-list__item {
+}
+.carousel__next {
+}
+.pagginator-pages {
+}
+.pagginator-pages__item {
+}
+
+
+/* Popular services *Stop* */
