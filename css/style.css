@@ -4,7 +4,6 @@ html {
 
 body {
     margin: 0;
-    color: #fff;
     /* Растягиваем body по высоте html */
     min-height: 100%;
     display: grid;
@@ -1179,6 +1178,8 @@ b {
 }
 .profile-sidebar {
     height: 100vh;
+    position: sticky;
+    top: 0;
 
     background: #FFF;
     filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.10));
@@ -1376,8 +1377,11 @@ b {
 
 .profile-content {
     margin: 0 70px;
+    margin-bottom: 66px;
 }
 .profile-h1 {
+    margin-bottom: 64px;
+
     color: #292929;
     font-family: Raleway;
     font-size: 40px;
@@ -1388,12 +1392,46 @@ b {
 .balance-cards {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
 }
 .balance-cards__item {
+    padding: 31px 50px;
+    position: relative;
+
+    border-radius: 15px;
+    filter: drop-shadow(0px 7px 11px rgba(0, 0, 0, 0.23));
+}
+.balance-cards__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
     border-radius: 15px;
     background: linear-gradient(180deg, rgba(39, 181, 170, 0.70) 0%, rgba(40, 176, 199, 0.70) 100%);
     box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.25) inset;
     backdrop-filter: blur(7.5px);
+
+    z-index: -2;
+}
+.balance-cards__item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.25) inset;
+    backdrop-filter: blur(7.5px);
+
+    z-index: -1;
 }
 .balance-cards__title {
     color: #FFF;
@@ -1404,6 +1442,8 @@ b {
     line-height: normal;
 }
 .balance-cards__value {
+    margin-bottom: 57px;
+
     display: flex;
     align-items: baseline;
 
@@ -1414,6 +1454,12 @@ b {
     font-weight: 400;
     line-height: normal;
 }
+.balance-cards__title + .balance-cards__value {
+    margin-top: 40px;
+}
+.balance-cards__value > span:first-child {
+    margin-right: 10px;
+}
 .balance-cards__value > span:last-child {
     color: #D2D2D2;
     font-family: Questrial;
@@ -1423,9 +1469,663 @@ b {
     line-height: normal;
 }
 .flex-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 .balance-cards__btn {
+    padding: 10px 0;
+
+    border-radius: 10px;
+    background: #373737;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    text-align: center;
 }
 
 
+.active-cards {
+    margin-top: 75px;
+}
+.active-cards__header {
+    margin-bottom: 39px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.profile-h2 {
+    color: #323232;
+    font-family: Raleway;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.active-cards__count {
+    color: #5B5B5B;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.cards-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.cards-list__item {
+    position: relative;
+
+    width: 100%;
+    height: 219px;
+}
+.cards-list__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+}
+.cards-list__type-text {
+    position: absolute;
+    top: 24px;
+    right: 31px;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    z-index: -1;
+}
+.cards-list__type {
+    position: absolute;
+    bottom: 31px;
+    right: 31px;
+
+    z-index: -1;
+}
+.cards-list__cardholder {
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    z-index: -1;
+}
+.cards-list__expires-date {
+    position: absolute;
+    bottom: 30px;
+    left: 165px;
+
+    color: #FFF;
+    font-family: Credit Cards;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    z-index: -1;
+}
+.cards-list__cardnumber {
+    position: absolute;
+    bottom: 40px;
+    left: 26px;
+
+    display: flex;
+
+    z-index: -1;
+}
+.cards-list__cardnumber > span:first-child {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.cards-list__cardnumber > span:last-child{
+    margin-top: 8px;
+    margin-left: 15px;
+
+    color: #FFF;
+    font-family: Credit Card;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.active-cards__btn {
+    margin: 68px auto 0 auto;
+    padding: 10px 0;
+    width: 323px;
+    display: block;
+
+    border-radius: 10px;
+    background: #373737;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+}
+
+.wallet-history {
+    margin-top: 91px;
+}
+.wallet-history .table-search {
+    margin-top: 47px;
+}
+.profile-h2 {
+}
+.table-search {
+    padding: 26px 30px;
+
+    border-radius: 10px;
+    background: #F3F3F3;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.17);
+}
+.table-search > form {
+    display: flex;
+    align-items: center;
+}
+.search {
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    background: #FFF;
+}
+.table-search .search {
+    margin-right: 32px;
+}
+.search__btn {
+    margin-right: 15px;
+    padding: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: transparent;
+    background-image: url(../img/ph_magnifying-glass.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+}
+.search input {
+    border: none;
+    outline: none;
+
+    color: #323232;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.search input::placeholder {
+    color: #A7A7A7;
+}
+.table-search .reset-filter {
+    margin-left: auto;
+
+    color: #00C4B0;
+    font-family: Raleway;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    cursor: pointer;
+}
+.select {
+    appearance: none;
+    padding: 12px;
+    padding-right: 56px;
+
+    color: #A7A7A7;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    border: none;
+    border-radius: 10px;
+    background-color: #FFF;
+    background-image: url(../img/Arrow\ 5.svg);
+    background-position: calc(100% - 12px) center;
+    background-repeat: no-repeat;
+}
+.table-search .select:not(:last-child) {
+    margin-right: 14px;
+}
+.table-search + .table {
+    margin-top: 52px;
+}
+.table {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.table thead {
+    border-radius: 10px 10px 0 0;
+    background: rgba(0, 196, 176, 0.14);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.17);
+}
+.table th {
+    padding: 25px 30px;
+
+    color: #343434;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+.table tbody {
+    border-radius: 0 0 20px 20px;
+    background: #F3F3F3;
+    box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.10);
+}
+.table td {
+    padding: 15px 30px;
+
+    color: #343434;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.td-card-number {
+    position: relative;
+    padding-left: calc(15px + 60px)!important;
+}
+.td-card-number > span:first-child {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+
+    color: #343434;
+    font-family: Raleway;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.td-card-number > span:last-child {
+    color: #343434;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 /* Profile main page *Stop* */
+
+/* Overlay *Start* */
+
+.overlay {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    animation: fadeOut linear .2s;
+}
+.overlay.opened {
+    display: block;
+}
+.overlay > .container {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(64, 64, 64, 0.70);
+    backdrop-filter: blur(2px);
+}
+.overlay-item {
+    padding: 53px 0 90px 0;
+    display: none;
+
+    width: 30%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    border-radius: 20px;
+    background: #F3F3F3;
+    box-shadow: 0px 1px 17px 11px rgba(0, 0, 0, 0.14);
+}
+.overlay-item.opened {
+    display: block;
+}
+.overlay-item  > .container {
+    margin: 0 10%;
+}
+.overlay-h2 {
+    color: #292929;
+    font-family: Raleway;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.overlay-h2:first-child {
+    margin-bottom: 42px;
+}
+.input-wrapper:not(:last-child) {
+    margin-bottom: 17px;
+}
+.input-wrapper .select {
+    width: 100%;
+}
+.label {
+    display: block;
+
+    color: #373737;
+    font-family: Raleway;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.label + * {
+    margin-top: 22px;
+}
+.input {
+    padding: 19px 29px;
+    width: calc(100% - 58px);
+
+    
+    font-family: Questrial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #373737;
+
+    border-radius: 10px;
+    background: #FFF;
+
+    border: none;
+    outline: none;
+}
+.input::placeholder {
+    color: #A3A3A3;
+}
+.overlay-btn {
+    padding: 13px 0;
+    width: 100%;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    border-radius: 10px;
+    background: #373737;
+
+    cursor: pointer;
+}
+
+.table-search + .cards-section {
+    margin-top: 106px;
+}
+.cards-section__btn {
+    margin: 78px auto 0 auto;
+    padding: 12px 0;
+    width: 277px;
+
+    border-radius: 10px;
+    background: #373737;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+
+    cursor: pointer;
+}
+.back-btn {
+    padding-left: 33px;
+
+    background-image: url(../img/Arrow\ 8.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    color: #B3B3B3;
+    font-family: Raleway;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+.card-selection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 46px;
+}
+.card-selection__item {
+    padding: 22px 54px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 54px 19px;
+
+    border-radius: 20px;
+    background: #F3F3F3;
+    box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.10);
+}
+.card-selection__h2 {
+    color: #181818;
+    font-family: Raleway;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; /* 166.667% */
+}
+.card-selection__p {
+    color: #555;
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.card-selection__hint {
+    padding: 8px 14px;
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    background: #FFF;
+}
+.card-selection__hint > img {
+    margin-right: 8px;
+}
+.card-selection__hint > span {
+    color: #353A42;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.card-selection__preview {
+}
+.card-selection-costs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.card-selection-costs__item {
+}
+.card-selection-costs__h3 {
+    color: #181818;
+    font-family: Raleway;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; /* 125% */
+}
+.card-selection-costs__p {
+    color: #818181;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.card-selection-costs__btn {
+    width: 206px;
+    height: fit-content;
+    padding: 11px 0;
+
+    border-radius: 10px;
+    background: #373737;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+/* Overlay *Stop* */
+
+/* Card issue *Start* */
+
+.card-issue {
+    padding: 71px 62px 94px 80px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 38px;
+
+    border-radius: 20px;
+    background: #F3F3F3;
+    box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.10);
+}
+.card-issue__preview {
+}
+.card-issue__fields {
+}
+.input-wrapper {
+}
+.label {
+}
+.input {
+}
+.card-issue__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-issue__h4 {
+    color: #454545;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.card-issue-prices {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.card-issue-prices__item {
+    padding: 7px 0 9px 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+.card-issue-prices__title {
+    color: #454545;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.card-issue-prices__value {
+    color: #454545;
+    font-family: Raleway;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.card-issue-prices__item:last-child .card-issue-prices__title {
+    font-size: 15px;
+    font-weight: 700;
+}
+.card-issue-prices__item:last-child .card-issue-prices__value {
+    font-size: 18px;
+    font-weight: 700;
+}
+.card-issue__submit {
+    padding: 0 34px;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 277.778% */
+
+    border: none;
+    border-radius: 10px;
+    background: #373737;
+}
+
+/* Card issue *Stop* */

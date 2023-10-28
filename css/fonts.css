@@ -23,3 +23,9 @@
     font-weight: 100 900; /* Диапазон веса шрифта (от 100 до 900) */
     font-stretch: 100% 200%; /* Различные настройки наклона */
 }
+@font-face {
+    font-family: 'Credit Card';
+    src: url('../fonts/credit-card.regular.ttf') format('truetype');
+    font-weight: 100 900; /* Диапазон веса шрифта (от 100 до 900) */
+    font-stretch: 100% 200%; /* Различные настройки наклона */
+}

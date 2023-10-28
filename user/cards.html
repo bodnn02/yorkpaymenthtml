@@ -17,7 +17,7 @@
                     <img class="logo" src="../img/logo.svg" alt="">
                 </a>
                 <nav class="profile-nav">
-                    <a class="profile-nav__item selected" href="">
+                    <a class="profile-nav__item" href="">
                         <svg class="profile-nav__icon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
                             <g clip-path="url(#clip0_140_865)">
                                 <path d="M17.215 0.264072C17.0158 0.0936501 16.7622 0 16.5 0C16.2378 0 15.9842 0.0936501 15.785 0.264072L0 13.7941V29.7001C0 30.5753 0.347678 31.4147 0.966548 32.0335C1.58542 32.6524 2.42479 33.0001 3.3 33.0001H12.1C12.3917 33.0001 12.6715 32.8842 12.8778 32.6779C13.0841 32.4716 13.2 32.1918 13.2 31.9001V25.3001C13.2 24.4249 13.5477 23.5855 14.1665 22.9666C14.7854 22.3477 15.6248 22.0001 16.5 22.0001C17.3752 22.0001 18.2146 22.3477 18.8335 22.9666C19.4523 23.5855 19.8 24.4249 19.8 25.3001V31.9001C19.8 32.1918 19.9159 32.4716 20.1222 32.6779C20.3285 32.8842 20.6083 33.0001 20.9 33.0001H29.7C30.5752 33.0001 31.4146 32.6524 32.0335 32.0335C32.6523 31.4147 33 30.5753 33 29.7001V13.7941L17.215 0.264072Z"/>
@@ -30,7 +30,7 @@
                         </svg>
                         <span>Главная</span>
                     </a>
-                    <a class="profile-nav__item" href="">
+                    <a class="profile-nav__item selected" href="">
                         <svg class="profile-nav__icon" xmlns="http://www.w3.org/2000/svg" width="37" height="28" viewBox="0 0 37 28" fill="none">
                             <path d="M32.5 2H4.5C2.84315 2 1.5 3.34315 1.5 5V23C1.5 24.6569 2.84315 26 4.5 26H32.5C34.1569 26 35.5 24.6569 35.5 23V5C35.5 3.34315 34.1569 2 32.5 2Z" fill="None" stroke-width="3"/>
                             <path d="M1 10H35.5" stroke-width="3"/>
@@ -110,37 +110,28 @@
                 </div>
                 <div class="profile-content">
                     <div class="container">
-                        <h1 class="profile-h1">Главная</h1>
-                        <div class="balance-cards">
-                            <div class="balance-cards__item">
-                                <h3 class="balance-cards__title">Общий баланс</h3>
-                                <div class="balance-cards__value">
-                                    <span>$</span>
-                                    <span>2 122</span>
-                                    <span>.00</span>
-                                </div>
-                                <div class="flex-wrapper">
-                                    <div class="balance-cards__btn" data-link="deposit-overlay">Пополнить</div>
-                                    <div class="balance-cards__btn" data-link="transfer-overlay">Между счетами</div>
-                                </div>
-                            </div>
-                            <div class="balance-cards__item">
-                                <h3 class="balance-cards__title">На картах</h3>
-                                <div class="balance-cards__value">
-                                    <span>$</span>
-                                    <span>2 122</span>
-                                    <span>.00</span>
-                                </div>
-                                <div class="flex-wrapper">
-                                    <a class="balance-cards__btn" href="">Пополнить</a>
-                                </div>
-                            </div>
+                        <div class="profile-content__header">
+                            <h1 class="profile-h1">Карты</h1>
                         </div>
-                        <section class="active-cards">
-                            <div class="active-cards__header">
-                                <h2 class="profile-h2">Активные карты</h2>
-                                <div class="active-cards__count">Количество активных карт: 3</div>
-                            </div>
+                        <div class="table-search">
+                            <form action="">
+                                <div class="search">
+                                    <button class="search__btn"></button>
+                                    <input placeholder="Поиск карт" type="text">
+                                </div>
+                                <select class="select" name="" id="">
+                                    <option value="" selected disabled>Тип транзакций</option>
+                                </select>
+                                <select class="select" name="" id="">
+                                    <option value="" selected disabled>Статус; Активная</option>
+                                </select>
+                                <select class="select" name="" id="">
+                                    <option value="" selected disabled>Рекламная</option>
+                                </select>
+                                <div class="reset-filter">Сбросить фильтр</div>
+                            </form>
+                        </div>
+                        <section class="cards-section">
                             <ul class="cards-list">
                                 <li class="cards-list__item">
                                     <img class="cards-list__background" src="../img/card-background.png"></img>
@@ -176,83 +167,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <a class="active-cards__btn" href="">Выпустить карту</a>
-                        </section>
-                        <section class="wallet-history">
-                            <h2 class="profile-h2">История по счету</h2>
-                            <div class="table-search">
-                                <form action="">
-                                    <div class="search">
-                                        <button class="search__btn"></button>
-                                        <input placeholder="Поиск карт" type="text">
-                                    </div>
-                                    <select class="select" name="" id="">
-                                        <option value="" selected disabled>Тип транзакций</option>
-                                    </select>
-                                    <div class="reset-filter">Сбросить фильтр</div>
-                                </form>
-                            </div>
-                            <table class="table">
-                                <thead>
-                                    <th>Дата/Время</th>
-                                    <th>Описание</th>
-                                    <th>Карта</th>
-                                    <th>№Карты</th>
-                                    <th>Сумма</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>15.10.2023 00:00</td>
-                                        <td>Выпуск рекламной карты</td>
-                                        <td>Рекламная</td>
-                                        <td class="td-card-number">
-                                            <span>***</span>
-                                            <span>5439</span>
-                                        </td>
-                                        <td>110 $</td>
-                                    </tr>
-                                    <tr>
-                                        <td>15.10.2023 00:00</td>
-                                        <td>Выпуск рекламной карты</td>
-                                        <td>Рекламная</td>
-                                        <td class="td-card-number">
-                                            <span>***</span>
-                                            <span>5439</span>
-                                        </td>
-                                        <td>110 $</td>
-                                    </tr>
-                                    <tr>
-                                        <td>15.10.2023 00:00</td>
-                                        <td>Выпуск рекламной карты</td>
-                                        <td>Рекламная</td>
-                                        <td class="td-card-number">
-                                            <span>***</span>
-                                            <span>5439</span>
-                                        </td>
-                                        <td>110 $</td>
-                                    </tr>
-                                    <tr>
-                                        <td>15.10.2023 00:00</td>
-                                        <td>Выпуск рекламной карты</td>
-                                        <td>Рекламная</td>
-                                        <td class="td-card-number">
-                                            <span>***</span>
-                                            <span>5439</span>
-                                        </td>
-                                        <td>110 $</td>
-                                    </tr>
-                                    <tr>
-                                        <td>15.10.2023 00:00</td>
-                                        <td>Выпуск рекламной карты</td>
-                                        <td>Рекламная</td>
-                                        <td class="td-card-number">
-                                            <span>***</span>
-                                            <span>5439</span>
-                                        </td>
-                                        <td>110 $</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="cards-section__btn">Загрузить еще</div>
                         </section>
                     </div>
                 </div>
