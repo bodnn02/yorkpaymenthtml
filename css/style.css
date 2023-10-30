@@ -2965,6 +2965,9 @@ b {
     .select {
         min-width: 103px;
     }
+    .table-search .select:not(:last-child) {
+        margin-right: 0px;
+    }
     .select__header {
         padding: 5px 14px;
     }
