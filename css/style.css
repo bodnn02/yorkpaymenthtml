@@ -1339,6 +1339,7 @@ b {
     display: none;
 }
 .profile-header__right {
+    width: fit-content;
     display: flex;
     align-items: center;
 }
