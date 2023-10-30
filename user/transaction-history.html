@@ -30,7 +30,7 @@
                         </svg>
                         <span>Главная</span>
                     </a>
-                    <a class="profile-nav__item selected" href="">
+                    <a class="profile-nav__item" href="">
                         <svg class="profile-nav__icon" xmlns="http://www.w3.org/2000/svg" width="37" height="28" viewBox="0 0 37 28" fill="none">
                             <path d="M32.5 2H4.5C2.84315 2 1.5 3.34315 1.5 5V23C1.5 24.6569 2.84315 26 4.5 26H32.5C34.1569 26 35.5 24.6569 35.5 23V5C35.5 3.34315 34.1569 2 32.5 2Z" fill="None" stroke-width="3"/>
                             <path d="M1 10H35.5" stroke-width="3"/>
@@ -38,7 +38,7 @@
                         </svg>
                         <span>Карты</span>
                     </a>
-                    <a class="profile-nav__item" href="">
+                    <a class="profile-nav__item selected" href="">
                         <svg class="profile-nav__icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
                             <path d="M18 10V17.3846L22 22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M3.74742 8.2934L2.40129 8.30017C2.40498 9.03833 3.00248 9.63582 3.74066 9.63954L3.74742 8.2934ZM8.30959 9.66249C9.05305 9.66623 9.65876 9.06658 9.66249 8.32313C9.66623 7.57967 9.06658 6.97396 8.32313 6.97022L8.30959 9.66249ZM5.0706 3.7177C5.06685 2.97425 4.46115 2.37458 3.7177 2.37831C2.97425 2.38206 2.37458 2.98778 2.37833 3.73122L5.0706 3.7177ZM2.69231 17.5C2.69231 16.7566 2.08961 16.1538 1.34615 16.1538C0.6027 16.1538 0 16.7566 0 17.5H2.69231ZM26.2509 32.6581C26.8945 32.2858 27.1144 31.4623 26.7422 30.8187C26.3699 30.1752 25.5464 29.9552 24.903 30.3276L26.2509 32.6581ZM30.3276 24.903C29.9552 25.5464 30.1752 26.3699 30.8187 26.7422C31.4623 27.1144 32.2858 26.8945 32.6581 26.2509L30.3276 24.903ZM5.18777 5.0638C4.65945 5.58688 4.6552 6.43921 5.17829 6.96753C5.70137 7.49585 6.55369 7.50009 7.08201 6.97701L5.18777 5.0638ZM29.8169 5.18334C22.9602 -1.67343 11.8799 -1.74286 5.06854 5.06854L6.97229 6.97229C12.7143 1.2303 22.0898 1.26366 27.9133 7.08709L29.8169 5.18334ZM5.06854 5.06854L2.79555 7.34153L4.6993 9.24528L6.97229 6.97229L5.06854 5.06854ZM3.74066 9.63954L8.30959 9.66249L8.32313 6.97022L3.75419 6.94727L3.74066 9.63954ZM5.09356 8.28664L5.0706 3.7177L2.37833 3.73122L2.40129 8.30017L5.09356 8.28664ZM17.5 2.69231C25.678 2.69231 32.3077 9.32194 32.3077 17.5H35C35 7.83501 27.165 0 17.5 0V2.69231ZM17.5 32.3077C9.32194 32.3077 2.69231 25.678 2.69231 17.5H0C0 27.165 7.83501 35 17.5 35V32.3077ZM24.903 30.3276C22.7263 31.5867 20.1993 32.3077 17.5 32.3077V35C20.6854 35 23.6756 34.1478 26.2509 32.6581L24.903 30.3276ZM32.3077 17.5C32.3077 20.1993 31.5867 22.7263 30.3276 24.903L32.6581 26.2509C34.1478 23.6756 35 20.6854 35 17.5H32.3077ZM7.08201 6.97701C9.75884 4.3267 13.4372 2.69231 17.5 2.69231V0C12.6995 0 8.34818 1.93471 5.18777 5.0638L7.08201 6.97701Z"/>
@@ -49,7 +49,11 @@
             </aside>
             <div class="profile-page-wrapper">
                 <div class="profile-header">
-                    <div class="profile-header__left"></div>
+                    <div class="profile-header__left">
+                        <a class="logo-link" href="">
+                            <img class="logo" src="../img/logo.svg" alt="">
+                        </a>
+                    </div>
                     <div class="profile-header__right">
                         <div class="profile-date">Сегодня 12 октября, 2023</div>
                         <div class="lang-selector">
@@ -106,59 +110,118 @@
                                 <path d="M25.5385 9V5.5C25.5385 4.57174 25.1738 3.6815 24.5246 3.02513C23.8754 2.36875 22.995 2 22.0769 2H5.46154C4.54348 2 3.66303 2.36875 3.01386 3.02513C2.3647 3.6815 2 4.57174 2 5.5V26.5C2 27.4283 2.3647 28.3185 3.01386 28.9749C3.66303 29.6312 4.54348 30 5.46154 30H22.0769C22.995 30 23.8754 29.6312 24.5246 28.9749C25.1738 28.3185 25.5385 27.4283 25.5385 26.5V23M31.0769 9L38 16M38 16L31.0769 23M38 16H14.375" stroke="#21323A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
+                        <div class="m-btn" id="profile-m-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="profile-content">
                     <div class="container">
-                        <a class="back-btn" href="">Карты</a>
                         <div class="profile-content-header">
-                            <h1 class="profile-h1">Карты</h1>
-                            <div class="profile-content__balance">
-                                <span>Баланс:</span>
-                                <span>$</span>
-                                <span>2 122</span>
-                                <span>.00</span>
-                            </div>
+                            <h1 class="profile-h1">История транзакций</h1>
                         </div>
-                        <form class="card-issue" action="">
-                            <img class="card-issue__preview" src="../img/card-issue.png" alt="">
-                            <div class="card-issue__fields">
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Счет</label>
-                                    <input class="input" type="text">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Кол-во карт</label>
-                                    <input class="input" type="number">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Название карты</label>
-                                    <input class="input" type="text">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Сумма депозита на карту</label>
-                                    <input class="input" type="text">
-                                </div>
-                            </div>
-                            <div class="card-issue__info">
-                                <h4 class="card-issue__h4">Информация о вашей операции</h4>
-                                <div class="card-issue-prices">
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Стоимость карты</div>
-                                        <div class="card-issue-prices__value">5 $</div>
+                        <div class="table-search">
+                            <form action="">
+                                <div class="select">
+                                    <div class="select__header">
+                                        <span class="select__heading">Выберите один вариант</span>
+                                        <img src="../img/Arrow 5.svg" alt="">
                                     </div>
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Cумма вклада</div>
-                                        <div class="card-issue-prices__value">105 $</div>
-                                    </div>
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Коммисия за пополнение</div>
-                                        <div class="card-issue-prices__value">5 $</div>
+                                    <div class="select__content">
+                                        <ul class="select-list">
+                                            <li class="select-list__item">Universal</li>
+                                            <li class="select-list__item">Adv</li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <button class="card-issue__submit">Выпустить новую карту</button>
-                            </div>
-                        </form>
+                                <div class="select">
+                                    <div class="select__header">
+                                        <span class="select__heading">Выберите один вариант</span>
+                                        <img src="../img/Arrow 5.svg" alt="">
+                                    </div>
+                                    <div class="select__content">
+                                        <ul class="select-list">
+                                            <li class="select-list__item">Основной счёт</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="select">
+                                    <div class="select__header">
+                                        <span class="select__heading">Выберите один вариант</span>
+                                        <img src="../img/Arrow 5.svg" alt="">
+                                    </div>
+                                    <div class="select__content">
+                                        <ul class="select-list">
+                                            <li class="select-list__item">Дата</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="reset-filter">Сбросить фильтр</div>
+                            </form>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <th>Дата/Время</th>
+                                <th>Описание</th>
+                                <th>Карта</th>
+                                <th>№Карты</th>
+                                <th>Сумма</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Дата:">15.10.2023 00:00</td>
+                                    <td data-label="Тип:">Выпуск рекламной карты</td>
+                                    <td data-label="Карта:">Рекламная</td>
+                                    <td class="td-card-number" data-label="№ Карты:">
+                                        <span>***</span>
+                                        <span>5439</span>
+                                    </td>
+                                    <td data-label="Сумма:">110 $</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Дата:">15.10.2023 00:00</td>
+                                    <td data-label="Тип:">Выпуск рекламной карты</td>
+                                    <td data-label="Карта:">Рекламная</td>
+                                    <td class="td-card-number" data-label="№ Карты:">
+                                        <span>***</span>
+                                        <span>5439</span>
+                                    </td>
+                                    <td data-label="Сумма:">110 $</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Дата:">15.10.2023 00:00</td>
+                                    <td data-label="Тип:">Выпуск рекламной карты</td>
+                                    <td data-label="Карта:">Рекламная</td>
+                                    <td class="td-card-number" data-label="№ Карты:">
+                                        <span>***</span>
+                                        <span>5439</span>
+                                    </td>
+                                    <td data-label="Сумма:">110 $</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Дата:">15.10.2023 00:00</td>
+                                    <td data-label="Тип:">Выпуск рекламной карты</td>
+                                    <td data-label="Карта:">Рекламная</td>
+                                    <td class="td-card-number" data-label="№ Карты:">
+                                        <span>***</span>
+                                        <span>5439</span>
+                                    </td>
+                                    <td data-label="Сумма:">110 $</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Дата:">15.10.2023 00:00</td>
+                                    <td data-label="Тип:">Выпуск рекламной карты</td>
+                                    <td data-label="Карта:">Рекламная</td>
+                                    <td class="td-card-number" data-label="№ Карты:">
+                                        <span>***</span>
+                                        <span>5439</span>
+                                    </td>
+                                    <td data-label="Сумма:">110 $</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

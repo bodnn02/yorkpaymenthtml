@@ -110,53 +110,37 @@
                 </div>
                 <div class="profile-content">
                     <div class="container">
-                        <a class="back-btn" href="">Карты</a>
+                        <a class="back-btn" href="">Данные карты</a>
                         <div class="profile-content-header">
-                            <h1 class="profile-h1">Карты</h1>
-                            <div class="profile-content__balance">
-                                <span>Баланс:</span>
-                                <span>$</span>
-                                <span>2 122</span>
-                                <span>.00</span>
+                            <h1 class="profile-h1">Блокировка карты</h1>
+                            <div class="card-nav">
+                                <a class="card-nav__item" href="">Пополнить</a>
+                                <a class="card-nav__item selected" href="">Заблокировать</a>
                             </div>
                         </div>
-                        <form class="card-issue" action="">
-                            <img class="card-issue__preview" src="../img/card-issue.png" alt="">
-                            <div class="card-issue__fields">
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Счет</label>
-                                    <input class="input" type="text">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Кол-во карт</label>
-                                    <input class="input" type="number">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Название карты</label>
-                                    <input class="input" type="text">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Сумма депозита на карту</label>
-                                    <input class="input" type="text">
+                        <form class="card-block" action="">
+                            <div class="cards-list__item">
+                                <img class="cards-list__background" src="../img/card-background.png">
+                                <div class="cards-list__type-text">universal</div>
+                                <img class="cards-list__type" src="../img/visa.svg">
+                                <div class="cards-list__cardholder">YorkPayment</div>
+                                <div class="cards-list__expires-date">08/25</div>
+                                <div class="cards-list__cardnumber">
+                                    <span>**** ****</span>
+                                    <span>5439</span>
                                 </div>
                             </div>
-                            <div class="card-issue__info">
-                                <h4 class="card-issue__h4">Информация о вашей операции</h4>
-                                <div class="card-issue-prices">
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Стоимость карты</div>
-                                        <div class="card-issue-prices__value">5 $</div>
-                                    </div>
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Cумма вклада</div>
-                                        <div class="card-issue-prices__value">105 $</div>
-                                    </div>
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Коммисия за пополнение</div>
-                                        <div class="card-issue-prices__value">5 $</div>
-                                    </div>
+                            <div>
+                                <h2 class="card-block__h2">Заблокировать карту</h2>
+                                <div class="checkbox-wrapper">
+                                    <input class="checkbox" required type="checkbox" name="card-block-confirm" id="card-block-confirm">
+                                    <label for="card-block-confirm">Подтвердить блокировку карты</label>
                                 </div>
-                                <button class="card-issue__submit">Выпустить новую карту</button>
+                                <p class="card-block__P">
+                                    Карта будет заблокирована
+                                    <span id="card-block-date">15.10.2023</span>
+                                </p>
+                                <div class="card-block__btn">Заблокировать</div>
                             </div>
                         </form>
                     </div>

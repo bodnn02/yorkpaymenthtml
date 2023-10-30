@@ -113,52 +113,181 @@
                         <a class="back-btn" href="">Карты</a>
                         <div class="profile-content-header">
                             <h1 class="profile-h1">Карты</h1>
-                            <div class="profile-content__balance">
-                                <span>Баланс:</span>
-                                <span>$</span>
-                                <span>2 122</span>
-                                <span>.00</span>
+                            <div class="card-nav">
+                                <a class="card-nav__item" href="">Пополнить</a>
+                                <a class="card-nav__item" href="">Заблокировать</a>
                             </div>
                         </div>
-                        <form class="card-issue" action="">
-                            <img class="card-issue__preview" src="../img/card-issue.png" alt="">
-                            <div class="card-issue__fields">
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Счет</label>
-                                    <input class="input" type="text">
+                        <div class="card-data">
+                            <div class="card-data-header">
+                                <h3 class="card-data__h3">Реквизиты карты</h3>
+                                <p class="card-data__balance">
+                                    <span>Счет на данной карте:</span>
+                                    <span>$</span>
+                                    <span>1 300</span>
+                                    <span>.00</span>
+                                </p>
+                            </div>
+                            <div class="card-data-content">
+                                <div class="card-data-fields">
+                                    <div class="card-data-fields__item col2">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="">Номер карты</label>
+                                            <div class="input">
+                                                <input type="text" value="1234 5345 5354 5439" disabled>
+                                                <div class="input__copy-btn"></div>
+                                            </div>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label class="label" for="">Владелец карты</label>
+                                            <div class="input">
+                                                <input type="text" value="yorkpayment" disabled>
+                                                <div class="input__copy-btn"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-data-fields__item">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="">Адрес</label>
+                                            <div class="input">
+                                                <input type="text" value="12391 Caldwell street 57 , LONDON" disabled>
+                                                <div class="input__copy-btn"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-data-fields__item col2">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="">Срок действия</label>
+                                            <div class="input">
+                                                <input type="text" value="08/25" disabled>
+                                                <div class="input__copy-btn"></div>
+                                            </div>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label class="label" for="">CVC</label>
+                                            <div class="input">
+                                                <input type="text" value="398" disabled>
+                                                <div class="input__copy-btn"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Кол-во карт</label>
-                                    <input class="input" type="number">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Название карты</label>
-                                    <input class="input" type="text">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Сумма депозита на карту</label>
-                                    <input class="input" type="text">
+                                <div class="cards-list__item">
+                                    <img class="cards-list__background" src="../img/card-background.png">
+                                    <div class="cards-list__type-text">universal</div>
+                                    <img class="cards-list__type" src="../img/visa.svg">
+                                    <div class="cards-list__cardholder">YorkPayment</div>
+                                    <div class="cards-list__expires-date">08/25</div>
+                                    <div class="cards-list__cardnumber">
+                                        <span>**** ****</span>
+                                        <span>5439</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-issue__info">
-                                <h4 class="card-issue__h4">Информация о вашей операции</h4>
-                                <div class="card-issue-prices">
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Стоимость карты</div>
-                                        <div class="card-issue-prices__value">5 $</div>
+                        </div>
+                        <section class="transaction-history">
+                            <h2 class="profile-h2">История операций </h2>
+                            <div class="table-search">
+                                <form action="">
+                                    <div class="select">
+                                        <div class="select__header">
+                                            <span class="select__heading">Выберите один вариант</span>
+                                            <img src="../img/Arrow 5.svg" alt="">
+                                        </div>
+                                        <div class="select__content">
+                                            <ul class="select-list">
+                                                <li class="select-list__item">Universal</li>
+                                                <li class="select-list__item">Adv</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Cумма вклада</div>
-                                        <div class="card-issue-prices__value">105 $</div>
+                                    <div class="select">
+                                        <div class="select__header">
+                                            <span class="select__heading">Выберите один вариант</span>
+                                            <img src="../img/Arrow 5.svg" alt="">
+                                        </div>
+                                        <div class="select__content">
+                                            <ul class="select-list">
+                                                <li class="select-list__item">Основной счёт</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Коммисия за пополнение</div>
-                                        <div class="card-issue-prices__value">5 $</div>
+                                    <div class="select">
+                                        <div class="select__header">
+                                            <span class="select__heading">Выберите один вариант</span>
+                                            <img src="../img/Arrow 5.svg" alt="">
+                                        </div>
+                                        <div class="select__content">
+                                            <ul class="select-list">
+                                                <li class="select-list__item">Дата</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <button class="card-issue__submit">Выпустить новую карту</button>
+                                    <div class="reset-filter">Сбросить фильтр</div>
+                                </form>
                             </div>
-                        </form>
+                            <table class="table">
+                                <thead>
+                                    <th>Дата/Время</th>
+                                    <th>Описание</th>
+                                    <th>Карта</th>
+                                    <th>№Карты</th>
+                                    <th>Сумма</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Дата:">15.10.2023 00:00</td>
+                                        <td data-label="Тип:">Выпуск рекламной карты</td>
+                                        <td data-label="Карта:">Рекламная</td>
+                                        <td class="td-card-number" data-label="№ Карты:">
+                                            <span>***</span>
+                                            <span>5439</span>
+                                        </td>
+                                        <td data-label="Сумма:">110 $</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Дата:">15.10.2023 00:00</td>
+                                        <td data-label="Тип:">Выпуск рекламной карты</td>
+                                        <td data-label="Карта:">Рекламная</td>
+                                        <td class="td-card-number" data-label="№ Карты:">
+                                            <span>***</span>
+                                            <span>5439</span>
+                                        </td>
+                                        <td data-label="Сумма:">110 $</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Дата:">15.10.2023 00:00</td>
+                                        <td data-label="Тип:">Выпуск рекламной карты</td>
+                                        <td data-label="Карта:">Рекламная</td>
+                                        <td class="td-card-number" data-label="№ Карты:">
+                                            <span>***</span>
+                                            <span>5439</span>
+                                        </td>
+                                        <td data-label="Сумма:">110 $</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Дата:">15.10.2023 00:00</td>
+                                        <td data-label="Тип:">Выпуск рекламной карты</td>
+                                        <td data-label="Карта:">Рекламная</td>
+                                        <td class="td-card-number" data-label="№ Карты:">
+                                            <span>***</span>
+                                            <span>5439</span>
+                                        </td>
+                                        <td data-label="Сумма:">110 $</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Дата:">15.10.2023 00:00</td>
+                                        <td data-label="Тип:">Выпуск рекламной карты</td>
+                                        <td data-label="Карта:">Рекламная</td>
+                                        <td class="td-card-number" data-label="№ Карты:">
+                                            <span>***</span>
+                                            <span>5439</span>
+                                        </td>
+                                        <td data-label="Сумма:">110 $</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
                     </div>
                 </div>
             </div>

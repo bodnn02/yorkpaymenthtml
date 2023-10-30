@@ -110,55 +110,53 @@
                 </div>
                 <div class="profile-content">
                     <div class="container">
-                        <a class="back-btn" href="">Карты</a>
+                        <a class="back-btn" href="">Главная</a>
                         <div class="profile-content-header">
-                            <h1 class="profile-h1">Карты</h1>
-                            <div class="profile-content__balance">
+                            <h1 class="profile-h1">Пополнение</h1>
+                            <div class="card-nav">
+                                <a class="card-nav__item" href="">Пополнить</a>
+                                <a class="card-nav__item selected" href="">Заблокировать</a>
+                            </div>
+                        </div>
+                        <div class="card-deposit">
+                            <div class="card-deposit__balance">
                                 <span>Баланс:</span>
                                 <span>$</span>
                                 <span>2 122</span>
                                 <span>.00</span>
                             </div>
+                            <form class="deposit-address" action="">
+                                <div class="deposit-address-header">
+                                    <img class="deposit-address__icon" src="../img/trc20.svg" alt="">
+                                    <h3 class="deposit-address__h3">USDT TRC20</h3>
+                                </div>
+                                <div class="deposit-address-content">
+                                    <div class="deposit-address__fields-wrapper">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="">Адрес для перевода</label>
+                                            <div class="input">
+                                                <input type="text" value="TL5aoG7p5AJn75UtMwv5ezehuG8ukFvWfp" disabled>
+                                                <div class="input__copy-btn"></div>
+                                            </div>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label class="label" for="">Сумма пополнения</label>
+                                            <div class="input">
+                                                <input type="number" value="1000" disabled>
+                                                <div class="input__copy-btn"></div>
+                                            </div>
+                                        </div>
+                                        <div class="deposit-address__btn">Выполнить перевод</div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="card-deposit__p">
+                                *Важно указать именно эту сумму для перевода и ни центом меньше/больше, иначе платеж не будет зачислен. <br>
+                                На оплату отведено 60 минут. <br>
+                                Если вы не успеваете, сгенерируйте новый счет. <br>
+                                Средства зачисляются в течение 24-х часов
+                            </div>
                         </div>
-                        <form class="card-issue" action="">
-                            <img class="card-issue__preview" src="../img/card-issue.png" alt="">
-                            <div class="card-issue__fields">
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Счет</label>
-                                    <input class="input" type="text">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Кол-во карт</label>
-                                    <input class="input" type="number">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Название карты</label>
-                                    <input class="input" type="text">
-                                </div>
-                                <div class="input-wrapper">
-                                    <label class="label" for="">Сумма депозита на карту</label>
-                                    <input class="input" type="text">
-                                </div>
-                            </div>
-                            <div class="card-issue__info">
-                                <h4 class="card-issue__h4">Информация о вашей операции</h4>
-                                <div class="card-issue-prices">
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Стоимость карты</div>
-                                        <div class="card-issue-prices__value">5 $</div>
-                                    </div>
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Cумма вклада</div>
-                                        <div class="card-issue-prices__value">105 $</div>
-                                    </div>
-                                    <div class="card-issue-prices__item">
-                                        <div class="card-issue-prices__title">Коммисия за пополнение</div>
-                                        <div class="card-issue-prices__value">5 $</div>
-                                    </div>
-                                </div>
-                                <button class="card-issue__submit">Выпустить новую карту</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
