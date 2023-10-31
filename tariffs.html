@@ -72,8 +72,8 @@
                     <h2 class="section-h2">Тарифы</h2>
                 </div>
                 <div class="tariffs">
-                    <ul class="tariffs-list">
-                        <li class="tariffs-list__item">
+                    <ul class="tariffs-list" data-paggination="tariffs-list">
+                        <li class="tariffs-list__item selected">
                             <div class="tariff-label">
                                 <img class="tariff-label__icon" src="img/razor.svg" alt="">
                                 <p class="tariff-label__text">Для любых покупок</p>
@@ -122,6 +122,10 @@
                             <a class="button-style-3" href="">Заказать</a>
                         </li>
                     </ul>
+                </div>
+                <div class="paggination-list" data-pagginator="tariffs-list">
+                    <div class="paggination-list__item selected"></div>
+                    <div class="paggination-list__item"></div>
                 </div>
             </div>
         </section>
