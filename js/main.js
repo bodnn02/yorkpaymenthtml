@@ -196,3 +196,6 @@ $('.paggination-list__item', '[data-pagginator]').on('click', function(e) {
     $('[data-paggination="' + attr + '"]').children().eq($(this).index()).addClass('selected')
 });
 
+$(".articles-next").on('click', function(e) {
+    $(this).parent().find('.articles').scrollWidth;
+});
