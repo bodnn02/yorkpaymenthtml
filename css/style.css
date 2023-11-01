@@ -392,6 +392,8 @@ b {
 .main-section__bg img:nth-child(1) {
     position: absolute;
 
+    width: 60%;
+
     right: 0;
     bottom: -167px;
 
@@ -400,6 +402,8 @@ b {
 .main-section__bg img:nth-child(2) {
     position: absolute;
 
+    width: 44%;
+
     right: 0;
     bottom: 0;
 
@@ -407,6 +411,8 @@ b {
 }
 .main-section__bg img:nth-child(3) {
     position: absolute;
+
+    width: 62%;
 
     right: 0;
     bottom: 0;
@@ -459,6 +465,10 @@ b {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+.popular-services-header .section-header {
+    margin-top: 40px;
 }
 .popular-services__p {
     color: #181818;
@@ -579,7 +589,7 @@ b {
 
     transition: linear .2s;
 }
-.answers-list__item.expanded::after {
+.answers-list__item::before {
     content: "";
 
     position: absolute;
@@ -590,6 +600,22 @@ b {
     height: 100%;
 
     transition: linear .2s;
+
+    z-index: -1;
+}
+.answers-list__item::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition: linear .2s;
+
+    z-index: -1;
 }
 .answers-list__item:not(:last-child) {
     margin-bottom: 15px;
@@ -608,6 +634,10 @@ b {
     backdrop-filter: blur(7.5px);
 
     z-index: -1;
+}
+.answers-list__item.expanded::before {
+    border-radius: 15px;
+    background: linear-gradient(180deg, #27B6AA 0%, #28B0C6 100%);
 }
 .answers-list__item.expanded:not(:last-child) {
     margin-bottom: 29px;
@@ -647,6 +677,8 @@ b {
     display: block;
 }
 .answers-list__p {
+    padding-right: 64px;
+
     color: #FFF;
     font-family: Raleway;
     font-size: 28px;
@@ -725,11 +757,10 @@ b {
 .work-steps__item {
     position: relative;
 
-    padding-top: 24px;
+    padding: 24px 0;
     max-width: 336px;
-    max-height: 301px;
-    min-width: 336px;
-    min-height: 301px;
+    width: 100%;
+    min-height: calc(301px - 48px);
 
     display: flex;
     flex-direction: column;
@@ -803,8 +834,13 @@ b {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+.advantages-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 .advantages-preview > img {
-    width: 100%;
 }
 .advantages-section .section-header {
     margin-bottom: 50px;
@@ -2775,6 +2811,21 @@ b {
     .articles-section > .container {
         margin: 0 60px;
     }
+    .popular-services > .container {
+        margin: 0 60px;
+    }
+    .advantages-section > .container {
+        margin: 0 60px;
+    }
+    .works-section > .container {
+        margin: 0 60px;
+    }
+    .contact-section > .container {
+        margin: 0 60px;
+    }
+    .contact-section {
+        background-position: calc(100% - 60px) top;
+    }
 }
 @media (max-width: 1500px) {
     .profile-wrapper {
@@ -2799,6 +2850,9 @@ b {
     }
     .profile-sidebar .logo-link {
         display: none;
+    }
+    .answers-section > .container {
+        margin: 0 60px;
     }
 }
 @media (max-width: 1250px) {
