@@ -3446,6 +3446,46 @@ b {
         margin-top: 0;
         margin-left: 20px;
     }
+    .main-section {
+        padding: 56px 56px 420px 56px;
+    }
+    .text-h1 {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .main-section .text-h1 {
+        margin-bottom: 23px;
+    }
+    .button-style-2 {
+        padding: 12px 32px;
+
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .popular-services {
+        padding: 33px 0;
+    }
+    .popular-services__p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .popular-services-header {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .popular-services-header .section-header {
+        order: 1;
+    }
+    .popular-services-header .popular-services__p {
+        order: 2;
+    }
+    .popular-services-header .section-header {
+        margin-top: 0px;
+    }
+    .advantages-section > .container {
+        margin: 0 21px;
+    }
 }
 
 /* Adaptive styles *Stop* */
