@@ -638,6 +638,8 @@ b {
 
     border-radius: 15px;
 
+    border-radius: 15px;
+
     transition: linear .2s;
 
     z-index: -1;
@@ -651,6 +653,8 @@ b {
 
     width: 100%;
     height: 100%;
+
+    border-radius: 15px;
 
     border-radius: 15px;
 
@@ -703,9 +707,15 @@ b {
     width: 64px;
     height: 64px;
 
+    width: 64px;
+    height: 64px;
+
     cursor: pointer;
 }
 .answers-list__expand-btn > img {
+    width: 100%;
+    height: 100%;
+
     width: 100%;
     height: 100%;
 
@@ -3487,6 +3497,7 @@ b {
         font-size: 25px;
         font-weight: 500;
         line-height: normal;
+        line-height: normal;
     }
     .tariffs-section .section-header {
         margin-bottom: 36px;
@@ -3579,14 +3590,28 @@ b {
     .advantages-wrapper {
         gap: 30px;
     }
+    .advantages-section {
+        padding-bottom: 80px;
+    }
+    .advantages-section > .container {
+        margin: 0 21px;
+    }
+    .advantages-wrapper {
+        gap: 30px;
+    }
     .advantages-list__item {
+        align-items: flex-start;
+
         align-items: flex-start;
 
         font-size: 13px;
         font-weight: 400;
         line-height: normal;
+        line-height: normal;
     }
     .advantages-list__item::before {
+        margin-right: 3px;
+
         margin-right: 3px;
 
         min-width: 15px;
@@ -3633,6 +3658,10 @@ b {
     }
     .work-steps__link {
         font-size: 15px;
+        text-align: left;
+    }
+    .work-steps__link {
+        font-size: 15px;
     }
     .work-steps__icon {
         margin: 0;
@@ -3644,6 +3673,67 @@ b {
         margin-top: 0;
         margin-left: 20px;
     }
+    .answers-section .section-header {
+        margin-bottom: 36px;
+    }
+    .answers-section > .container {
+        margin: 0 20px;
+    }
+    .answers-list__item {
+        padding: 10px 25px;
+    }
+    .answers-list__item.expanded:not(:last-child) {
+        margin-bottom: 14px;
+    }
+    .answers-list__item.expanded {
+        padding: 20px 25px;
+    }
+    .answers-list__h3 {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .answers-list__expand-btn {
+        width: 31px;
+        height: 31px;
+    }
+    .answers-list__p {
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .button-style-1 {
+        padding: 8px 32px;
+
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .button-style-2 {
+        padding: 10px 20px;
+
+        font-size: 12px;
+        font-weight: 700;
+
+        border-radius: 10px;
+    }
+    .contact-section {
+        padding: 88px 0 56px 0;
+
+        background: none;
+    }
+    .contact-section .section-header {
+        margin-bottom: 16px;
+    }
+    .contact-section > .container {
+        margin: 0 20px;
+    }
+    .contact-section__p {
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .contact-section .contact-section__p {
+        margin-bottom: 28px;
+    }
+    .contact-section .button-style-2 {
+        margin: 0 auto;
     .answers-section .section-header {
         margin-bottom: 36px;
     }
@@ -3756,11 +3846,30 @@ b {
     }
     .popular-services-header > .section-header {
         margin-top: 0;
+    .popular-services__p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .popular-services-header > .section-header {
+        margin-top: 0;
         order: 1;
     }
     .popular-services-header > .popular-services__p {
+    .popular-services-header > .popular-services__p {
         order: 2;
     }
+    .popular-services > .container {
+        margin: 0 20px;
+    }
+    .carousel__prev, .carousel__next {
+        display: none;
+    }
+    .section-label {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .section-label + .section-h2 {
     .popular-services > .container {
         margin: 0 20px;
     }
