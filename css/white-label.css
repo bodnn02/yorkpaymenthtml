@@ -570,7 +570,9 @@ b {
     margin: 0 150px;
 }
 
-.section-h2 {}
+.section-h2 {
+    margin-bottom: 60px;
+}
 
 .white-label-panel {
     padding: 50px 40px;
@@ -578,6 +580,10 @@ b {
     border-radius: 15px;
     box-shadow: 0px 5px 24px 6px rgba(0, 0, 0, 0.08);
     background: rgb(255, 255, 255);
+}
+
+.white-label-conditions__wrapper {
+    display: flex;
 }
 
 .text-p {
@@ -589,29 +595,89 @@ b {
     letter-spacing: 0%;
 }
 
-.price-text {}
+.price-text {
+    color: rgb(55, 55, 55);
+    font-family: Raleway;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.price-text span {
+    display: inline;
+}
 
 .green {
     color: #27b2b4;
 }
 
-.text-h5 {}
+.text-h5 {
+    color: rgb(0, 0, 0);
+    font-family: Raleway;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
 .white-label-table {
+    display: block;
     border-collapse: collapse;
     border: 1px solid #c4c4c4;
-
-}
-.white-label-table td, .white-label-table th {
     border-radius: 15px;
-    border: 1px solid #c4c4c4;
-}
-.white-label-table th {
-    padding: 24px 0;
-}
-.white-label-table td {
-    padding: 12px 4px;
 
+}
+.white-label-table {
+    margin: 30px 0;
+}
+.white-label-table__header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.23);
+}
+.white-label-table__row {
+    width: 100%;
+    display: flex;
+}
+.white-label-table__column {
+    padding: 11px 0;
+    width: 100%;
+
+    color: rgb(55, 55, 55);
+    font-family: Raleway;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
     text-align: center;
+}
+.white-label-table__row:not(:last-child) .white-label-table__column {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.white-label-table__column:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.23);
+}
+.white-label-table__body .white-label-table__column {
+    font-weight: bold;
+}
+
+.white-label-table td,
+.white-label-table th {
+    display: block;
+    width: 100%;
+    border: 1px solid #c4c4c4;
+
+
+}
+
+.flex-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-wrapper > * {
+    width: 100%;
 }
 
 /* White label - Conditions section *Stop* */
