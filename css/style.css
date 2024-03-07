@@ -13,6 +13,10 @@ b {
     font-weight: bold;
 }
 
+.ui-loader {
+    display: none;
+}
+
 /* Header *Start* */
 
 .header {
@@ -20,8 +24,8 @@ b {
 
     box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
 }
-.main-section__scroll-btn {
-    position: absolute;
+.scroll-btn {
+    position: fixed;
 
     width: 48px;
     height: 48px;
@@ -32,10 +36,13 @@ b {
     border-radius: 50%;
     border: 1px solid #FFF;
 
+    background: lightblue;
     background-image: url(../img/Arrow\ 1.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 65% 65%;
+
+    transform: rotate(180deg);
 
     cursor: pointer;
 
@@ -53,7 +60,7 @@ b {
     align-items: center;
 }
 .logo-link {
-    margin-right: 117px;
+    margin-right: 50px;
     display: block;
 }
 
@@ -63,11 +70,13 @@ b {
 }
 
 .header-nav {}
-
+#telegram-login-YorkCardBot {
+    margin-left: 54px;
+}
 .header-nav__item {
     color: #000;
     font-family: Raleway;
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 600;
     text-decoration: none;
@@ -95,12 +104,17 @@ b {
     font-style: normal;
     font-weight: 300;
     line-height: 90px; /* 600% */
+    text-decoration: none;
 
     border-radius: 6px;
     background-color: #fff;
 
     cursor: pointer;
     transition: background linear .2s;
+}
+.lang-selector__item a {
+    color: inherit;
+    text-decoration: none;
 }
 .lang-selector__item.selected {
     background-color: #E1E1E1;
@@ -121,9 +135,20 @@ b {
 }
 
 .social-links__item {
-    width: 43px;
-    height: 43px;
-
+    padding: 0 35px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #373737; */
+    border-radius: 25px;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
     cursor: pointer;
 }
 .social-links__item > img {
@@ -166,6 +191,9 @@ b {
     height: 25px;
 
     cursor: pointer;
+}
+.tgme_widget_login {
+    margin-left: ;
 }
 
 /* Header *Stop* */
@@ -543,7 +571,7 @@ b {
     max-height: 417px;
 }
 .brands-list__item {
-    width: 33.33%;
+    width: calc(33.33% - 10px);
     height: 69px;
 
     display: flex;
@@ -554,9 +582,14 @@ b {
 }
 .brands-list__item > img {
     width: 100%;
+    height: 100%;
+
+    max-width: 170px;
+    max-height: 70px;
 }
 .brands-list__item:not(:last-child) {
     margin-bottom: 60px;
+    margin-right: 10px;
 }
 .carousel__next {
 }
@@ -571,7 +604,7 @@ b {
 /* Answers section *Start* */
 
 .answers-section {
-    margin-top: 85px;
+    margin-top: 115px;
 }
 .answers-section > .container {
     margin-left: 315px;
@@ -701,6 +734,7 @@ b {
     line-height: normal;
 }
 .answers-section .button-style-1 {
+    padding: 17px 62px;
     margin: 45px auto 0 auto;
 }
 
@@ -717,12 +751,12 @@ b {
 /* Contact section *Start* */
 
 .contact-section {
-    padding-top: 112px;
+    padding-top: 157px;
     padding-bottom: 171px;
 
     background-image: url(../img/contact-section-bg.png);
     background-repeat: no-repeat;
-    background-position: calc(100% - 366px) top;
+    background-position: calc(100% - 366px) 45px;
 }
 
 .contact-section > .container {
@@ -749,7 +783,7 @@ b {
 /* Works section *Start* */
 .works-section {
     background-image: url(../img/works-section-bg.svg);
-    background-position: center center;
+    background-position: center calc(50% + 150px);
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
@@ -842,7 +876,10 @@ b {
     background-size: 100% auto;
 }
 .advantages-section > .container {
-    margin: 0 200px;
+    margin: 0 180px;
+}
+.advantages-section > .container > .section-header {
+    display: none;
 }
 .advantages-wrapper {
     display: grid;
@@ -1000,6 +1037,9 @@ b {
 .articles-section {
     padding-top: 85px;
 }
+.articles-section:last-child {
+    padding-bottom: 85px;
+}
 .articles-section > .container {
     margin: 0 310px;
 }
@@ -1024,6 +1064,10 @@ b {
     cursor: pointer;
     overflow: hidden;
 }
+.demo-list__item a {
+    color: inherit;
+    text-decoration: none;
+}
 .demo-list__preview {
     position: relative;
 
@@ -1039,6 +1083,7 @@ b {
 }
 .demo-list__preview > img {
     width: 100%;
+    height: 100%;
 }
 .demo-list__item:hover .demo-list__preview {
     height: 50%;
@@ -1226,6 +1271,8 @@ b {
     cursor: pointer;
     opacity: .7;
     transition: opacity linear .2s;
+
+    z-index: 2;
 }
 .articles-prev:hover, .articles-next:hover {
     opacity: 1;
@@ -1246,6 +1293,8 @@ b {
 .articles {
     display: flex;
     margin-left: 25vw;
+
+    transition: transform linear .3s;
 }
 .articles__item {
     min-width: 35vw;
@@ -1367,7 +1416,7 @@ b {
 .profile-nav__item > span {
     color: #616161;
     font-family: Raleway;
-    font-size: 25px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -1436,7 +1485,7 @@ b {
     margin-right: 27px;
 }
 .profile-notification {
-    margin-right: 39px;
+    margin-right: 25px;
 
     position: relative;
     min-width: 42px;
@@ -1444,7 +1493,13 @@ b {
 
     cursor: pointer;
 }
+.profile-notification__icon {
+    width: 100%;
+    height: 100%;
+}
 .profile-notification__icon > svg {
+    width: 26px;
+    height: auto;
     fill: #21323A;
 }
 .profile-notification__count {
@@ -1533,6 +1588,8 @@ b {
     margin-top: 10px;
 }
 .profile-exit {
+    width: 35px;
+    height: auto;
 }
 
 .profile-content {
@@ -1581,7 +1638,7 @@ b {
 }
 .balance-cards {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 40px;
 }
 .balance-cards__item {
@@ -1755,6 +1812,18 @@ b {
     font-weight: 800;
     line-height: normal;
 }
+.cards-list__sum {
+    position: absolute;
+    top: 34%;
+    left: 7%;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
 .cards-list__type-text {
     position: absolute;
     top: 13%;
@@ -1788,6 +1857,10 @@ b {
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
+    max-width: 110px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     z-index: 1;
 }
@@ -1882,13 +1955,14 @@ b {
     margin-right: 15px;
     padding: 0;
 
-    width: 18px;
+    min-width: 18px;
     height: 18px;
 
     background-color: transparent;
     background-image: url(../img/ph_magnifying-glass.svg);
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     border: none;
 }
 .search input {
@@ -1968,9 +2042,12 @@ b {
     left: 0;
 
     width: 100%;
+    max-height: 200px;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    overflow-y: auto;
 
     z-index: 2;
 }
@@ -2097,6 +2174,7 @@ b {
     display: none;
 
     width: 30%;
+    min-width: 500px;
 
     position: absolute;
     top: 50%;
@@ -2236,6 +2314,7 @@ b {
 }
 .card-selection__hint {
     padding: 8px 14px;
+    width: fit-content;
     height: fit-content;
 
     display: flex;
@@ -2294,6 +2373,7 @@ b {
     font-style: normal;
     font-weight: 400;
     text-align: center;
+    text-decoration: none;
 
     cursor: pointer;
 }
@@ -2312,6 +2392,33 @@ b {
     border-radius: 20px;
     background: #F3F3F3;
     box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.10);
+}
+.card-issue-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.card-issue-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 277px;
+    height: 52px;
+
+    border-radius: 10px;
+    background: #373737;
+
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
 }
 .card-issue__preview {
 }
@@ -2805,7 +2912,14 @@ b {
 /* Card deposit *Stop* */
 
 /* Adaptive styles *Start* */
-
+@media (max-width: 1800px) {
+    .header-nav {
+        display: none;
+    }
+    .header .m-btn {
+        display: block;
+    }
+ }
 @media (max-width: 1600px) {
     .header > .container {
         margin: 0 60px;
@@ -2841,6 +2955,12 @@ b {
     .contact-section {
         background-position: calc(100% - 60px) top;
     }
+    .article > .container {
+        margin: 0 60px;
+    }
+    .articles-suggestion .section-header {
+        margin: 0 60px;
+    }
 }
 @media (max-width: 1500px) {
     .profile-wrapper {
@@ -2849,10 +2969,12 @@ b {
     .profile-sidebar {
         display: none;
 
-        position: fixed;
+        position: absolute;
         top: 125px;
+        right: 0;
 
         width: 100%;
+        max-width: 500px;
         height: 100%;
 
         filter: none;
@@ -2868,6 +2990,9 @@ b {
     }
     .answers-section > .container {
         margin: 0 60px;
+    }
+    .profile-header .m-btn {
+        display: block;
     }
 }
 @media (max-width: 1250px) {
@@ -2902,6 +3027,9 @@ b {
     .card-selection__item .card-selection-costs__btn {
         order: 6;
     }
+    .tariffs-list__item .tarif-costs {
+        grid-template-columns: 1fr;
+    }
 }
 @media (max-width: 1100px) {
     .header-nav {
@@ -2915,6 +3043,9 @@ b {
     }
     .header .m-btn {
         display: block;
+    }
+    #telegram-login-YorkCardBot {
+        margin-left: 0;
     }
     .card-block .cards-list__item {
         margin-right: 30px;
@@ -2982,6 +3113,12 @@ b {
     .advantages-preview > img {
         width: 100%;
     }
+    .tariffs-list {
+        grid-template-columns: 1fr;
+    }
+    .demo-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media (max-width: 800px) {
     .profile-nav {
@@ -2997,7 +3134,7 @@ b {
         height: 21px;
     }
     .profile-nav__item > span {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 600;
     }
     .profile-header__left .logo-link {
@@ -3014,6 +3151,10 @@ b {
     }
     .profile-content-header .card-nav {
         margin-top: 21px;
+    }
+    .overlay-item {
+        min-width: 200px;
+        width: 80%;
     }
 }
 .paggination-list {
@@ -3054,8 +3195,8 @@ b {
         height: 47px;
     }
     .social-links__item {
-        width: 35px;
-        height: 35px;
+        padding: 0 25px;
+        font-size: 13px;
     }
     .footer {
         padding: 27px 0;
@@ -3088,6 +3229,24 @@ b {
         width: 112px;
         height: 36px;
     }
+    .card-issue-btn {
+        width: 119px;
+        height: 22px;
+
+        font-size: 10px;
+
+        border-radius: 5px;
+    }
+    .overlay-item {
+        padding: 25px 0 45px 0;
+    }
+    .overlay-h2 {
+        font-size: 22px;
+    }
+    .overlay-btn {
+        padding: 8px 0;
+        font-size: 14px;
+    }
     .profile-exit {
         width: auto;
         height: 25.854px;
@@ -3106,10 +3265,11 @@ b {
         height: 100%;
     }
     .profile-notification__icon > svg {
-        height: 100%;
+        width: 21px;
+        height: auto;
     }
     .profile-notification__count {
-        right: 3px;
+        right: -4px;
 
         width: 12px;
         height: 11px;
@@ -3129,7 +3289,7 @@ b {
         font-weight: 600;
     }
     .profile-content-header {
-        margin-bottom: 42px;
+        margin-bottom: 20px;
     }
     .table td {
         font-size: 16px;
@@ -3161,7 +3321,7 @@ b {
         height: 16.854px;
     }
     .select {
-        min-width: 103px;
+        min-width: 50px;
     }
     .table-search .select:not(:last-child) {
         margin-right: 0px;
@@ -3257,10 +3417,15 @@ b {
         font-weight: 500;
     }
     .card-selection__h2 {
+        margin-bottom: 16px;
+
         font-size: 18px;
+        line-height: 27.5px; /* 152.778% */
         font-weight: 600;
     }
     .card-selection__p {
+        margin-bottom: 30px;
+
         font-size: 13px;
         font-weight: 400;
     }
@@ -3546,7 +3711,7 @@ b {
         font-weight: 400;
         line-height: normal;
     }
-    .main-section__scroll-btn {
+    .scroll-btn {
         width: 24px;
         height: 24px;
 
@@ -3555,26 +3720,27 @@ b {
         bottom: 35px;
     }
     .main-section__bg img:nth-child(1) {
-        width: 100%;
+        width: 570px;
 
-        bottom: 0;
+        bottom: -57px;
+        right: -59px;
     }
     .main-section__bg img:nth-child(2) {
         width: 685.959px;
         height: 413.727px;
 
-        right: -332px;
+        right: -203px;
 
-        transform: rotate(-27.927deg);
+        transform: rotate(-28.927deg);
     }
     .main-section__bg img:nth-child(3) {
         width: 743.112px;
         height: 495.565px;
 
-        right: -292px;
+        right: -100px;
         bottom: -57px;
 
-        transform: rotate(6.953deg);
+        transform: rotate(-29.047deg);
     }
     .popular-services {
         padding: 33px 0;
@@ -3618,7 +3784,7 @@ b {
         margin-top: 48px;
     }
     .brands-list {
-        max-height: 61px;
+        max-height: 90px;
     }
     .brands-list__item {
         height: 35px;
@@ -3627,10 +3793,339 @@ b {
         margin: 0;
     }
     .brands-list__item:not(:last-child) {
-        margin-bottom: 0px;
+        margin-bottom: 10px;
     }
     .advantages-wrapper .section-header {
         display: none;
+    }
+    .main-section .text-h1 {
+        margin-bottom: 23px;
+    }
+    .main-section .button-style-2 {
+        padding: 14px 39px;
+    }
+    .advantages-section > .container > .section-header {
+        display: block;
+        margin-bottom: 39px;
+    }
+    .paggination-list__item {
+        width: 5px;
+        height: 5px;
+    }
+    .paggination-list__item:not(:last-child) {
+        margin-right: 3px;
+    }
+    .section-label::before {
+        height: 4px;
+    }
+    .demo-list {
+        grid-template-columns: 1fr;
+    }
+    .demo-list__item {
+        max-height: 341px;
+    }
+    .demo-list__h3 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .demo-list__h4 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .demo-list__p {
+        font-size: 10px;
+        line-height: 19px;
+    }
+    .articles-section > .container {
+        margin: 0 20px;
+    }
+    .demo-list__preview > img {
+        height: auto;
+    }
+    .article > .container {
+        margin: 0 20px;
+    }
+    .article-content {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 19px; /* 158.333% */
+    }
+    .articles-suggestion .section-header {
+        margin: 0 20px;
+        margin-bottom: 34px;
+    }
+    .article-header {
+        margin-bottom: 35px;
+    }
+    .article {
+        padding-top: 49px;
+        margin-bottom: 34px;
+    }
+    .cards-list {
+        grid-template-columns: 1fr;
+    }
+    .active-cards__btn {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .active-cards__btn {
+        width: 138.063px;
+        border-radius: 5px;
+    }
+    .profile-h2 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .active-cards__count {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .active-cards__header {
+        align-items: flex-end;
+    }
+    .select__header {
+        border-radius: 5px;
+    }
+    .input {
+        padding: 5px 7.5px;
+
+        min-width: 100px;
+        border-radius: 5px;
+    }
+    .input > input {
+        font-size: 10px;
+        font-weight: 300;
+    }
+    .search-btn {
+        margin-right: 3px;
+
+        min-width: 9px;
+        height: 9px;
+    }
+    .wallet-history {
+        margin-top: 48px;
+    }
+    .wallet-history .table-search {
+        margin-top: 21px;
+    }
+    .table-search > form > :not(:last-child) {
+        margin-right: 12px;
+    }
+    .cards-list__cardholder {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .cards-list__type-text {
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .cards-list__expires-date {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .cards-list__sum {
+        font-size: 12px;
+    }
+    .cards-list__num {
+        font-size: 12px;
+    }
+    .cards-list__cardnumber {
+        bottom: 25%;
+    }
+    .cards-list__cardnumber > span:first-child {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .cards-list__cardnumber > span:last-child {
+        margin-top: 4px;
+
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .cards-list__type {
+        width: 47.195px;
+    }
+    .table-search + .cards-section {
+        margin-top: 43px;
+    }
+    .cards-section__btn {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .cards-section__btn {
+        margin-top: 50px;
+
+        padding: 7px 0;
+        border-radius: 5px;
+    }
+    .card-selection__preview {
+        width: 100%;
+    }
+    .card-selection__preview {
+        margin: 37px 0;
+    }
+    .back-btn {
+        padding-left: 15px;
+
+        font-size: 15px;
+        font-weight: 600;
+
+        background-size: auto 60%;
+    }
+    .card-nav__item {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .card-block {
+        padding: 27px;
+    }
+    .card-block__h2 {
+        margin-bottom: 20px;
+
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .card-block__btn {
+        width: 100%;
+    }
+    .card-block__P {
+        margin-top: 10px;
+        margin-bottom: 18px;
+    }
+    .card-deposit {
+        padding: 20px 14px 75px 14px;
+    }
+    .card-deposit__balance {
+        width: fit-content;
+        margin-left: auto;
+    }
+    .deposit-address__fields-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .label {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .label + * {
+        margin-top: 4px;
+    }
+    .deposit-address__h3 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .deposit-address {
+        padding: 0;
+        background: none;
+        box-shadow: none;
+    }
+    .card-deposit__p {
+        font-size: 8px;
+        font-weight: 500;
+    }
+    .deposit-address__btn {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .card-deposit__balance > span:nth-child(1), .card-deposit__balance > span:nth-child(2), .card-deposit__balance > span:nth-child(3) {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+    }
+    .card-deposit__balance > span:nth-child(4) {
+        font-size: 9px;
+        font-weight: 600;
+    }
+    .card-deposit__balance {
+        margin-bottom: 10px;
+    }
+    .deposit-address__icon {
+        margin-left: 16px;
+
+        width: auto;
+        height: 47px;
+    }
+    .card-nav__item:not(:last-child) {
+        margin-right: 10px;
+    }
+    .card-data-fields__item.col2 {
+        grid-template-columns: 1fr;
+    }
+    .card-data-content {
+        grid-template-columns: 1fr;
+        gap: 39px;
+    }
+    .card-data-header {
+        flex-direction: column;
+    }
+    .card-data__balance {
+        margin-left: auto;
+    }
+    .card-data__balance > span:nth-child(1) {
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .card-data__balance > span:nth-child(2) {
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .card-data__balance > span:nth-child(3) {
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .card-data__balance > span:nth-child(4) {
+        font-size: 9px;
+    }
+    .card-data {
+        padding: 30px 24px;
+    }
+    .card-data__h3 {
+        display: none;
+    }
+    .card-data .label {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .card-data-fields__item.col2 {
+        gap: 13px;
+    }
+    .transaction-history .profile-h2 {
+        margin-bottom: 21px;
+    }
+    .card-issue {
+        padding: 29px;
+        grid-template-columns: 1fr;
+    }
+    .card-issue-prices {
+        margin: 30px 0 16px auto;
+    }
+    .profile-content__balance {
+        margin-top: 6px;
+        margin-left: auto;
+    }
+    .profile-content-header .profile-content__balance {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .profile-content-header .profile-content__balance > span:last-child {
+        font-size: 9px;
+        font-weight: 600;
+    }
+    .profile-content-header .profile-content__balance > span:nth-child(1) {
+        margin-right: 5px;
+    }
+    .profile-content-header .profile-content__balance > span:nth-child(2) {
+        margin-right: 5px;
+    }
+    .card-issue__info {
+        width: 100%;
+    }
+    .card-issue__submit {
+        padding: 9px 0;
+        width: 100%;
+
+        font-size: 15px;
+        font-weight: 400;
+        line-height: normal;
     }
 }
 

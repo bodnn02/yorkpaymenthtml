@@ -9,9 +9,11 @@ $("#m-btn").on('click', function(e) {
     $(".m-menu").toggleClass('opened')
 });
 $('#profile-m-btn').on('click', function(e) {
+    lockScroll()
     $(".profile-sidebar").toggleClass('opened')
 });
 $(".m-menu__close-btn").on('click', function(e) {
+    unlockScroll()
     $('.m-btn').removeClass('opened')
     $(".m-overlay").removeClass('opened')
     $(".m-menu").removeClass('opened')
@@ -199,3 +201,128 @@ $('.paggination-list__item', '[data-pagginator]').on('click', function(e) {
 $(".articles-next").on('click', function(e) {
     $(this).parent().find('.articles').scrollWidth;
 });
+
+$(".carousel").on("swipeleft", function() {
+    var content_wrapper = $(this).find('.carousel__content');
+    var content = $(content_wrapper).children('ul');
+    
+    // Вычисляем ширину всего контента, включая то, что выходит за границы
+    var totalWidth = $(content)[0].scrollWidth;
+    
+    // Получаем ширину контейнера
+    var containerWidth = $(content_wrapper).width();
+    
+    // Вычисляем количество страниц
+    var length = Math.ceil(totalWidth / containerWidth);
+    
+    var current_index = parseInt(content.css('transform').split(',')[4]);
+
+    // Устанавливаем ширину одной страницы
+    var pageWidth = containerWidth;
+    
+    // Проверяем, текущая страница находится на грани
+    if (current_index > -(length - 1) * pageWidth) {
+        // Перемещаем на следующую страницу (вправо)
+        var new_index = current_index - pageWidth;
+        content.css('transform', 'translateX(' + new_index + 'px)');
+    } else {
+        // Если текущая страница уже последняя, перейдем на первую страницу
+        content.css('transform', 'translateX(0)');
+    }
+});
+
+$(".carousel").on("swiperight", function() {
+    var content_wrapper = $(this).find('.carousel__content');
+    var content = $(content_wrapper).children('ul');
+    
+    // Вычисляем ширину всего контента, включая то, что выходит за границы
+    var totalWidth = $(content)[0].scrollWidth;
+    
+    // Получаем ширину контейнера
+    var containerWidth = $(content_wrapper).width();
+    
+    // Вычисляем количество страниц
+    var length = Math.ceil(totalWidth / containerWidth);
+    
+    var current_index = parseInt(content.css('transform').split(',')[4]);
+
+    // Устанавливаем ширину одной страницы
+    var pageWidth = containerWidth;
+    
+    // Проверяем, текущая страница находится на грани
+    if (current_index < 0) {
+        // Перемещаем на предыдущую страницу (влево)
+        var new_index = current_index + pageWidth;
+        content.css('transform', 'translateX(' + new_index + 'px)');
+    } else {
+        // Если текущая страница уже первая, перейдем на последнюю страницу
+        var new_index = -(length - 1) * pageWidth;
+        content.css('transform', 'translateX(' + new_index + 'px)');
+    }
+});
+
+$('.tariffs-list').on("swiperight", function() {
+
+});
+
+var container = $('.articles-wrapper');
+var articles = $('.articles');
+var items = $('.articles__item');
+var itemWidth = items.first().outerWidth();
+var itemCount = items.length;
+var currentIndex = 0;
+
+var showPrev = function() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateNavigation();
+    }
+};
+
+var showNext = function() {
+    if (currentIndex < itemCount - 3) { // 3 is the number of items to show at a time
+        currentIndex++;
+        updateNavigation();
+    }
+};
+
+var updateNavigation = function() {
+    articles.css('transform', 'translateX(' + (-currentIndex * itemWidth) + 'px)');
+    if (currentIndex === 0) {
+        $('.articles-prev').hide();
+    } else {
+        $('.articles-prev').show();
+    }
+    if (currentIndex === itemCount - 3) {
+        $('.articles-next').hide();
+    } else {
+        $('.articles-next').show();
+    }
+};
+
+$('.articles-prev').on('click', showPrev);
+$('.articles-next').on('click', showNext);
+updateNavigation();
+
+function lockScroll() {
+    var scrollPosition = [
+      self.pageXOffset ||
+        document.documentElement.scrollLeft ||
+        document.body.scrollLeft,
+      self.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop,
+    ];
+    var html = jQuery("html"); // it would make more sense to apply this to body, but IE7 won't have that
+    html.data("scroll-position", scrollPosition);
+    html.data("previous-overflow", html.css("overflow"));
+    html.css("overflow", "hidden");
+    window.scrollTo(scrollPosition[0], scrollPosition[1]);
+  }
+  
+  function unlockScroll() {
+    var html = jQuery("html");
+    var scrollPosition = html.data("scroll-position");
+    html.css("overflow", html.data("previous-overflow"));
+    window.scrollTo(scrollPosition[0], scrollPosition[1]);
+  }
