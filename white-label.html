@@ -14,23 +14,26 @@
     <header class="header">
         <div class="container">
             <div class="header-wrapper_left">
+                <a class="logo-link reload-link" href="/">
+                    <img class="logo" src="img/logo.svg" alt="">
+                </a>
                 <nav class="header-nav">
-                    <a class="header-nav__item" href="tariffs.html">Тарифы</a>
-                    <a class="header-nav__item" href="articles.html">Блог</a>
+                    <a class="header-nav__item reload-link" href="/tariffs">Тарифы</a>
+                    <a class="header-nav__item reload-link" href="/blog">Блог</a>
                 </nav>
             </div>
             <div class="header-wrapper_right">
                 <div class="lang-selector">
-                    <div class="lang-selector__item selected">RU</div>
+                    <a class="lang-selector__item {{ (session('applocale') == 'ru' ? 'selected' : '') }} reload-link" href="/changelang/ru">RU</a>
                     <div class="separator"></div>
-                    <div class="lang-selector__item">EN</div>
+                    <a class="lang-selector__item {{ (session('applocale') == 'en' ? 'selected' : '') }} reload-link" href="/changelang/en">EN</a>
                 </div>
                 <nav class="social-links">
-                    <a class="social-links__item" href="">
-                        Помощь
+                    <a class="social-links__item" href="https://t.me/YorkPayment">
+                        <img src="img/telegram.png" alt="YorkPayment">
                     </a>
                 </nav>
-                <a class="button-style-1" href="user/profile.html">Личный кабинет</a>
+                <a class="button-style-1 reload-link" href="https://auth.yorkpayment.com">Личный кабинет</a>
                 <div class="m-btn" id="m-btn">
                     <span></span>
                     <span></span>
@@ -38,26 +41,27 @@
                 </div>
             </div>
         </div>
+        <div class="scroll-btn"></div>
         <div class="m-overlay">
             <div class="container">
                 <div class="m-menu">
                     <div class="container">
                         <div class="m-menu__header">
-                            <a class="logo-link" href="/">
-                                <img class="logo" src="img/logo.svg" alt="">
+                            <a class="logo-link reload-link" href="/">
+                                <img class="logo" src="/assets/img/logo.svg" alt="">
                             </a>
                             <div class="m-menu__close-btn"></div>
                         </div>
                         <nav class="m-nav">
-                            <a class="m-nav__item" href="tariffs.html">Тарифы</a>
-                            <a class="m-nav__item" href="articles.html">Блог</a>
+                            <a class="m-nav__item reload-link" href="/tariffs">Тарифы</a>
+                            <a class="m-nav__item reload-link" href="/blog">Блог</a>
                         </nav>
                         <div class="lang-selector">
-                            <div class="lang-selector__item selected">RU</div>
+                            <a class="lang-selector__item {{ (session('applocale') == 'ru' ? 'selected' : '') }} reload-link" href="/changelang/ru">RU</a>
                             <div class="separator"></div>
-                            <div class="lang-selector__item">EN</div>
+                            <a class="lang-selector__item {{ (session('applocale') == 'en' ? 'selected' : '') }} reload-link" href="/changelang/en">EN</a>
                         </div>
-                        <a class="button-style-1" href="user/profile.html">Личный кабинет</a>
+                        <a class="button-style-1 reload-link" href="/user/profile">Личный кабинет</a>
                     </div>
                 </div>
             </div>
@@ -182,6 +186,10 @@
                     </div>
                 </div>
             </div>
+            <div class="gray-section-bg">
+                <img src="img/gray-section__bg-1.svg" alt="">
+                <img src="img/gray-section__bg-2.svg" alt="">
+            </div>
         </section>
         <section class="white-label-recomendations">
             <div class="container">
@@ -252,6 +260,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="gray-section-bg">
+                <img src="img/gray-section__bg-1.svg" alt="">
+                <img src="img/gray-section__bg-2.svg" alt="">
             </div>
         </section>
         <section class="white-label-actions">
@@ -377,6 +389,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="gray-section-bg">
+                <img src="img/gray-section__bg-1.svg" alt="">
+                <img src="img/gray-section__bg-2.svg" alt="">
+                <img src="img/svift_1ccfe220a8.png" alt="">
             </div>
         </section>
     </main>

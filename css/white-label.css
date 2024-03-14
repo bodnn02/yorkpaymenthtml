@@ -9,7 +9,6 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
-
 b {
     font-weight: bold;
 }
@@ -25,7 +24,6 @@ b {
 
     box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.25);
 }
-
 .scroll-btn {
     position: fixed;
 
@@ -50,7 +48,6 @@ b {
 
     z-index: 2;
 }
-
 .header>.container {
     margin: 0 229px;
 
@@ -58,13 +55,10 @@ b {
     justify-content: space-between;
     align-items: center;
 }
-
-.header-wrapper_left,
-.header-wrapper_right {
+.header-wrapper_left, .header-wrapper_right {
     display: flex;
     align-items: center;
 }
-
 .logo-link {
     margin-right: 50px;
     display: block;
@@ -76,11 +70,9 @@ b {
 }
 
 .header-nav {}
-
 #telegram-login-YorkCardBot {
     margin-left: 54px;
 }
-
 .header-nav__item {
     color: #000;
     font-family: Raleway;
@@ -89,9 +81,8 @@ b {
     font-weight: 600;
     text-decoration: none;
 }
-
 .header-nav__item:not(:last-child) {
-    margin-right: 37px;
+    margin-right:  37px;
 }
 
 .lang-selector {
@@ -112,8 +103,7 @@ b {
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
-    line-height: 90px;
-    /* 600% */
+    line-height: 90px; /* 600% */
     text-decoration: none;
 
     border-radius: 6px;
@@ -122,12 +112,10 @@ b {
     cursor: pointer;
     transition: background linear .2s;
 }
-
 .lang-selector__item a {
     color: inherit;
     text-decoration: none;
 }
-
 .lang-selector__item.selected {
     background-color: #E1E1E1;
 }
@@ -163,12 +151,10 @@ b {
     text-decoration: none;
     cursor: pointer;
 }
-
-.social-links__item>img {
+.social-links__item > img {
     width: 100%;
     height: 100%;
 }
-
 .button-style-1 {
     padding: 18px 32px 18px 44px;
     display: block;
@@ -193,7 +179,6 @@ b {
 .header-wrapper_right .button-style-1 {
     margin-left: 54px;
 }
-
 .header-wrapper_right .social-links {
     margin-left: 44px;
 }
@@ -207,7 +192,6 @@ b {
 
     cursor: pointer;
 }
-
 .tgme_widget_login {
     margin-left: ;
 }
@@ -222,7 +206,7 @@ b {
     display: none;
 }
 
-.m-btn>span {
+.m-btn > span {
     position: absolute;
     left: 0;
 
@@ -236,36 +220,29 @@ b {
 
     transition: transform linear .2s;
 }
-
-.m-btn>span:nth-child(1) {
+.m-btn > span:nth-child(1) {
     top: 0;
 }
-
-.m-btn>span:nth-child(2) {
+.m-btn > span:nth-child(2) {
     top: 50%;
     transform: translateY(-50%);
 }
-
-.m-btn>span:nth-child(3) {
+.m-btn > span:nth-child(3) {
     bottom: 0;
 }
-
-.m-btn.opened>span {
+.m-btn.opened > span {
     top: 50%;
     left: 0;
 
     transform: translateX(-50%) translateY(-50%);
 }
-
-.m-btn.opened>span:nth-child(1) {
+.m-btn.opened > span:nth-child(1) {
     transform: rotate(45deg);
 }
-
-.m-btn.opened>span:nth-child(2) {
+.m-btn.opened > span:nth-child(2) {
     display: none;
 }
-
-.m-btn.opened>span:nth-child(3) {
+.m-btn.opened > span:nth-child(3) {
     transform: rotate(-45deg);
 }
 
@@ -282,18 +259,15 @@ b {
     background: rgba(78, 78, 78, 0.53);
     z-index: 9999;
 }
-
 .m-overlay.opened {
     display: block;
     animation: fadeOut linear .4s;
 }
-
-.m-overlay>.container {
+.m-overlay > .container {
     position: relative;
     width: 100%;
     height: 100%;
 }
-
 .m-menu {
     display: none;
     padding: 25px;
@@ -308,29 +282,24 @@ b {
 
     z-index: 5;
 }
-
 @keyframes slideOut {
     from {
         transform: translateX(100%);
     }
-
     to {
         transform: translateX(0);
     }
 }
-
 .m-menu.opened {
     display: block;
     animation: slideOut linear .4s;
 }
-
 .m-menu__header {
     margin-bottom: 30px;
 
     display: flex;
     justify-content: space-between;
 }
-
 .m-menu__close-btn {
     width: 16px;
     height: 16px;
@@ -341,12 +310,10 @@ b {
 
     cursor: pointer;
 }
-
 .m-nav {
     display: grid;
     grid-template-columns: 1fr;
 }
-
 .m-nav__item {
     padding: 15px 0;
 
@@ -361,12 +328,10 @@ b {
 
     cursor: pointer;
 }
-
 .m-menu .lang-selector {
     margin: 16px auto;
     width: fit-content;
 }
-
 .m-menu .button-style-1 {
     padding: 12px 0;
     width: 100%;
@@ -390,20 +355,17 @@ b {
     background: #FFF;
     box-shadow: 0px -5px 13px 0px rgba(0, 0, 0, 0.25);
 }
-
-.footer>.container {
+.footer > .container {
     margin: 0 240px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 .footer-nav {
     display: flex;
     align-items: center;
 }
-
 .footer-nav__item {
     color: #000;
     font-family: Raleway;
@@ -412,7 +374,6 @@ b {
     font-weight: 600;
     text-decoration: none;
 }
-
 .footer-nav__item:not(:last-child) {
     margin-right: 40px;
 }
@@ -493,24 +454,6 @@ b {
     bottom: 0;
 
     z-index: 1;
-}
-.logo {
-    background-color: #fff;
-    width: 385px;
-    height: 135px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 15px;
-
-    overflow: hidden;
-}
-
-.logo>img {
-    width: 324.69px;
-    height: 108.23px;
 }
 
 .white-label-main .text-h1 {
@@ -624,7 +567,11 @@ b {
 /* White label - Conditions section *Start* */
 
 .white-label-conditions {
+    position: relative;
+
     padding: 150px 0;
+
+    overflow: hidden;
 }
 .white-label-conditions .price-text {
     width: fit-content;
@@ -787,7 +734,11 @@ b {
 /* White label - Recomendations section *Start* */
 
 .white-label-recomendations {
+    position: relative;
+
     padding: 80px 0;
+
+    overflow: hidden;
 }
 
 .white-label-recomendations>.container {
@@ -964,7 +915,10 @@ b {
 /* White label - Countries section *Start* */
 
 .white-label-countries {
-    padding: 80px 0;
+    position: relative;
+    padding: 150px 0;
+
+    overflow: hidden;
 }
 .white-label-countries > .container {
     margin: 0 150px;
@@ -1000,3 +954,50 @@ b {
 }
 
 /* White label - Countries section *Stop* */
+
+.gray-section-bg {
+}
+.gray-section-bg > img:nth-child(1) {
+    position: absolute;
+
+    top: 45%;
+    right: 460px;
+
+    z-index: -1;
+}
+.gray-section-bg > img:nth-child(2) {
+    position: absolute;
+
+    display: block;
+
+    bottom: 72%;
+    left: 78%;
+}
+.gray-section-bg > img:nth-child(3) {
+    position: absolute;
+
+    display: block;
+
+    height: 670px;
+
+    bottom: 0px;
+    right: -10px;
+
+    z-index: -1;
+}
+
+
+@media (max-width: 600px) {
+    .white-label-contains {
+        grid-template-columns: 1fr;
+    }
+    .recomendations-list {
+        grid-template-columns: 1fr;
+    }
+    .countries-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .white-label-conditions__wrapper {
+        grid-template-columns: 1fr;
+    }
+}
